@@ -1,6 +1,10 @@
+import 'package:adat_indonesia/app/data/enums/e_constant.dart';
+import 'package:adat_indonesia/app/data/utils/colour_palette.dart';
+import 'package:adat_indonesia/app/data/utils/common_utils.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:glass/glass.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -9,15 +13,58 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('HomeView'),
-        centerTitle: true,
-      ),
-      body: const Center(
-        child: Text(
-          'HomeView is working',
-          style: TextStyle(fontSize: 20),
-        ),
+      body: Stack(
+        children: [
+          Container(
+            height: double.infinity,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage('assets/images/bg.png'), fit: BoxFit.cover),
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  ColourPalette.skyBlueWhite,
+                  Colors.teal,
+                ],
+              ),
+            ),
+          ),
+          SafeArea(
+            child: Padding(
+              padding: EdgeInsets.all(EConstant.smallPadding.value),
+              child: Column(
+                spacing: 20,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Adat Budaya\nIndonesia',
+                    style: CommonUtils.headerStyle.copyWith(
+                      color: ColourPalette.pastelWhite,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  Center(
+                      child: Container(
+                    width: 200,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: ColourPalette.pastelWhite,
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Center(
+                      child: Text(
+                        'MULAI',
+                        style: CommonUtils.titleStyle.copyWith(),
+                      ),
+                    ),
+                  ))
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
