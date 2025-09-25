@@ -40,6 +40,7 @@ dependencies:
   glass: ^2.0.0+2
   json_annotation: ^4.9.0
   freezed_annotation: ^3.1.0
+  advanced_image_processing_toolkit: ^0.1.2
 
 dev_dependencies:
   flutter_test:
