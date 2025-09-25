@@ -1,6 +1,8 @@
 import 'package:adat_indonesia/app/data/enums/e_constant.dart';
+import 'package:adat_indonesia/app/data/utils/asset_url.dart';
 import 'package:adat_indonesia/app/data/utils/colour_palette.dart';
 import 'package:adat_indonesia/app/data/utils/common_utils.dart';
+import 'package:adat_indonesia/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -20,7 +22,7 @@ class HomeView extends GetView<HomeController> {
             width: double.infinity,
             decoration: BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage('assets/images/bg.png'), fit: BoxFit.cover),
+                  image: AssetImage(AssetUrl.bgImage), fit: BoxFit.cover),
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
@@ -45,21 +47,27 @@ class HomeView extends GetView<HomeController> {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  Center(
-                      child: Container(
-                    width: 200,
-                    height: 50,
-                    decoration: BoxDecoration(
-                      color: ColourPalette.pastelWhite,
-                      borderRadius: BorderRadius.circular(15),
-                    ),
+                  GestureDetector(
+                    behavior: HitTestBehavior.translucent,
+                    onTap: () {
+                      Get.toNamed(Routes.ADAT_LIST);
+                    },
                     child: Center(
-                      child: Text(
-                        'MULAI',
-                        style: CommonUtils.titleStyle.copyWith(),
+                        child: Container(
+                      width: 200,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        color: ColourPalette.pastelWhite,
+                        borderRadius: BorderRadius.circular(15),
                       ),
-                    ),
-                  ))
+                      child: Center(
+                        child: Text(
+                          'MULAI',
+                          style: CommonUtils.titleStyle.copyWith(),
+                        ),
+                      ),
+                    )),
+                  )
                 ],
               ),
             ),
