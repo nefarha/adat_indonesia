@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 
 /// @nodoc
 mixin _$RaceModel {
-  String get ras;
+  ERas get ras;
   String get adat;
   String get ciriBahasa;
   String get imagePath;
@@ -63,7 +63,7 @@ abstract mixin class $RaceModelCopyWith<$Res> {
       _$RaceModelCopyWithImpl;
   @useResult
   $Res call(
-      {String ras,
+      {ERas ras,
       String adat,
       String ciriBahasa,
       String imagePath,
@@ -92,7 +92,7 @@ class _$RaceModelCopyWithImpl<$Res> implements $RaceModelCopyWith<$Res> {
       ras: null == ras
           ? _self.ras
           : ras // ignore: cast_nullable_to_non_nullable
-              as String,
+              as ERas,
       adat: null == adat
           ? _self.adat
           : adat // ignore: cast_nullable_to_non_nullable
@@ -127,7 +127,7 @@ class _RaceModel implements RaceModel {
       _$RaceModelFromJson(json);
 
   @override
-  final String ras;
+  final ERas ras;
   @override
   final String adat;
   @override
@@ -192,7 +192,7 @@ abstract mixin class _$RaceModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String ras,
+      {ERas ras,
       String adat,
       String ciriBahasa,
       String imagePath,
@@ -221,7 +221,7 @@ class __$RaceModelCopyWithImpl<$Res> implements _$RaceModelCopyWith<$Res> {
       ras: null == ras
           ? _self.ras
           : ras // ignore: cast_nullable_to_non_nullable
-              as String,
+              as ERas,
       adat: null == adat
           ? _self.adat
           : adat // ignore: cast_nullable_to_non_nullable

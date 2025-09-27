@@ -1,3 +1,4 @@
+import 'package:adat_indonesia/app/data/enums/e_ras.dart';
 import 'package:adat_indonesia/app/data/utils/asset_url.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -7,7 +8,7 @@ part 'race_model.g.dart';
 @freezed
 abstract class RaceModel with _$RaceModel {
   const factory RaceModel({
-    required String ras,
+    required ERas ras,
     required String adat,
     required String ciriBahasa,
     required String imagePath,
@@ -95,6 +96,53 @@ abstract class RaceModel with _$RaceModel {
           "teks": "Kula kersa nyuwun pangapunten",
           "arti": "Saya ingin meminta maaf"
         }
+      ]
+    },
+    {
+      "ras": "sunda",
+      "adat":
+          "Adat Sunda berasal dari Jawa Barat dengan falsafah 'silih asah, silih asih, silih asuh'. Hidup rukun, gotong royong, dan ramah tamah jadi ciri khas masyarakat Sunda.",
+      "ciri_bahasa": "Lembut, halus, ada tingkatan (lemes, sedang, kasar).",
+      'image_path': AssetUrl.sundaRumah,
+      "contoh_bahasa": [
+        {
+          "tingkat": "lemes",
+          "teks": "Mangga tuang heula",
+          "arti": "Silakan makan dulu"
+        },
+        {
+          "tingkat": "lemes",
+          "teks": "Hatur nuhun pisan",
+          "arti": "Terima kasih banyak"
+        },
+        {"tingkat": "sedang", "teks": "Kumaha damang?", "arti": "Apa kabar?"},
+        {"tingkat": "kasar", "teks": "Aing lapar", "arti": "Saya lapar"}
+      ]
+    },
+    {
+      "ras": "bali",
+      "adat":
+          "Adat Bali dipengaruhi oleh agama Hindu. Kehidupan masyarakat diatur dalam banjar dan upacara keagamaan sangat dominan.",
+      "ciri_bahasa": "Ada tingkatan (alus, madya, kasar) sesuai lawan bicara.",
+      'image_path': AssetUrl.baliRumah,
+      "contoh_bahasa": [
+        {"tingkat": "alus", "teks": "Ampura", "arti": "Maaf"},
+        {"tingkat": "alus", "teks": "Suksma", "arti": "Terima kasih"},
+        {"tingkat": "madya", "teks": "Beli teko", "arti": "Saya datang"},
+        {"tingkat": "kasar", "teks": "Ci kenken?", "arti": "Apa kabar?"}
+      ]
+    },
+    {
+      "ras": "dayak",
+      "adat":
+          "Adat Dayak berkembang di pedalaman Kalimantan. Adatnya erat dengan alam, animisme, dan kepercayaan Kaharingan. Upacara adat seperti Tiwah (ritual kematian) menjadi salah satu ciri khas.",
+      "ciri_bahasa":
+          "Bahasa Dayak beragam sesuai sub-suku (Ngaju, Kenyah, Iban, Kayan). Umumnya tegas, dekat dengan kosakata alam.",
+      'image_path': AssetUrl.dayakRumah,
+      "contoh_bahasa": [
+        {"teks": "Selamat lewu", "arti": "Selamat datang di kampung"},
+        {"teks": "Hapakat basara", "arti": "Bermusyawarah untuk mufakat"},
+        {"teks": "Lewu", "arti": "Kampung atau desa"}
       ]
     }
   ];

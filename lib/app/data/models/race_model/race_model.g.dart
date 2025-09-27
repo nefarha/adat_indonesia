@@ -7,7 +7,7 @@ part of 'race_model.dart';
 // **************************************************************************
 
 _RaceModel _$RaceModelFromJson(Map<String, dynamic> json) => _RaceModel(
-      ras: json['ras'] as String,
+      ras: $enumDecode(_$ERasEnumMap, json['ras']),
       adat: json['adat'] as String,
       ciriBahasa: json['ciri_bahasa'] as String,
       imagePath: json['image_path'] as String,
@@ -18,12 +18,21 @@ _RaceModel _$RaceModelFromJson(Map<String, dynamic> json) => _RaceModel(
 
 Map<String, dynamic> _$RaceModelToJson(_RaceModel instance) =>
     <String, dynamic>{
-      'ras': instance.ras,
+      'ras': _$ERasEnumMap[instance.ras]!,
       'adat': instance.adat,
       'ciri_bahasa': instance.ciriBahasa,
       'image_path': instance.imagePath,
       'contoh_bahasa': instance.contohBahasa.map((e) => e.toJson()).toList(),
     };
+
+const _$ERasEnumMap = {
+  ERas.melayu: 'melayu',
+  ERas.jawa: 'jawa',
+  ERas.batak: 'batak',
+  ERas.sunda: 'sunda',
+  ERas.bali: 'bali',
+  ERas.dayak: 'dayak',
+};
 
 _LanguageTypeModel _$LanguageTypeModelFromJson(Map<String, dynamic> json) =>
     _LanguageTypeModel(

@@ -14,6 +14,7 @@ class AdatIndonesiaApp extends StatelessWidget {
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
       theme: adatTheme(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

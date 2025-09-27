@@ -67,7 +67,7 @@ class AdatListView extends GetView<AdatListController> {
                       ),
                     ),
                     Text(
-                      model.ras.capitalize!,
+                      model.ras.name.capitalize!,
                       style: CommonUtils.titleStyle,
                     ),
                   ],
