@@ -23,6 +23,8 @@ class ModelViewerView extends GetView<ModelViewerController> {
           color: ColourPalette.pastelWhite,
         ),
         child: O3D(
+          debugLogging: true,
+
           arPlacement: ArPlacement.floor,
 
           // Model dari assets
@@ -34,6 +36,8 @@ class ModelViewerView extends GetView<ModelViewerController> {
             ERas.melayu => AssetUrl.melayuModel,
             ERas.bali => AssetUrl.baliModel,
           },
+          onWebViewCreated: (value) => print('Assda $value'),
+
           // AR Configuration - ini yang penting!
           ar: true,
           arModes: const [
