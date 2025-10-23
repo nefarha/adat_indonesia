@@ -158,7 +158,7 @@ abstract class LanguageTypeModel with _$LanguageTypeModel {
   const factory LanguageTypeModel({
     required String teks,
     required String arti,
-    required String? tingkat,
+    String? tingkat,
   }) = _LanguageTypeModel;
 
   factory LanguageTypeModel.fromJson(Map<String, dynamic> json) =>

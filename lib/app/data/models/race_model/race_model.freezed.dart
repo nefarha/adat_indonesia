@@ -326,7 +326,7 @@ class _$LanguageTypeModelCopyWithImpl<$Res>
 @JsonSerializable()
 class _LanguageTypeModel implements LanguageTypeModel {
   const _LanguageTypeModel(
-      {required this.teks, required this.arti, required this.tingkat});
+      {required this.teks, required this.arti, this.tingkat});
   factory _LanguageTypeModel.fromJson(Map<String, dynamic> json) =>
       _$LanguageTypeModelFromJson(json);
 
